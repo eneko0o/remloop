@@ -355,42 +355,42 @@ namespace remloop
         private void Consoleinfo()
         {
             AppendToLog("                               d8b                           \n                               88P                           \n                              d88                            \n  88bd88b d8888b  88bd8b,d88b 888   d8888b  d8888b ?88,.d88b,\n  88P'  `d8b_,dP  88P'`?8P'?8b?88  d8P' ?88d8P' ?88`?88'  ?88\n d88     88b     d88  d88  88P 88b 88b  d8888b  d88  88b  d8P\nd88'     `?888P'd88' d88'  88b  88b`?8888P'`?8888P'  888888P'\n                                                     88P'    \nby eneko0o lic$andr                                  d88      \n                                                    ?8P      ", Color.Cyan);
-            AppendToLog($"в версии 0.6 добавлено:", Color.White);
-            AppendToLog($"  команды info, pinfo (подробнее 'help')", Color.LightGray);
-            AppendToLog($"  удаление верхней панели", Color.LightGray);
-            AppendToLog($"  обновление API, с добавлением константа описания каждой зарег. команды", Color.LightGray);
-            AppendToLog($"  добавлена проверка на регистрацию похожих по имени команд", Color.LightGray);
-            AppendToLog($"  добавлена проверка на правильность названия плагина (32 символа, без пробелов)", Color.LightGray);
-            AppendToLog($"  исправлена ошибка, из-за которой команды без конфликтов требовали префикс плагина", Color.LightGray);
-            AppendToLog($"  добавлены подсказки для неверно введенных команд (до 5 предложений, включая команды плагинов)", Color.LightGray);
-            AppendToLog($"  команда info-history для отображения истории версий", Color.LightGray);
+            AppendToLog($"Гў ГўГҐГ°Г±ГЁГЁ 0.6 Г¤Г®ГЎГ ГўГ«ГҐГ­Г®:", Color.White);
+            AppendToLog($"  ГЄГ®Г¬Г Г­Г¤Г» info, pinfo (ГЇГ®Г¤Г°Г®ГЎГ­ГҐГҐ 'help')", Color.LightGray);
+            AppendToLog($"  ГіГ¤Г Г«ГҐГ­ГЁГҐ ГўГҐГ°ГµГ­ГҐГ© ГЇГ Г­ГҐГ«ГЁ", Color.LightGray);
+            AppendToLog($"  Г®ГЎГ­Г®ГўГ«ГҐГ­ГЁГҐ API, Г± Г¤Г®ГЎГ ГўГ«ГҐГ­ГЁГҐГ¬ ГЄГ®Г­Г±ГІГ Г­ГІГ  Г®ГЇГЁГ±Г Г­ГЁГї ГЄГ Г¦Г¤Г®Г© Г§Г Г°ГҐГЈ. ГЄГ®Г¬Г Г­Г¤Г»", Color.LightGray);
+            AppendToLog($"  Г¤Г®ГЎГ ГўГ«ГҐГ­Г  ГЇГ°Г®ГўГҐГ°ГЄГ  Г­Г  Г°ГҐГЈГЁГ±ГІГ°Г Г¶ГЁГѕ ГЇГ®ГµГ®Г¦ГЁГµ ГЇГ® ГЁГ¬ГҐГ­ГЁ ГЄГ®Г¬Г Г­Г¤", Color.LightGray);
+            AppendToLog($"  Г¤Г®ГЎГ ГўГ«ГҐГ­Г  ГЇГ°Г®ГўГҐГ°ГЄГ  Г­Г  ГЇГ°Г ГўГЁГ«ГјГ­Г®Г±ГІГј Г­Г Г§ГўГ Г­ГЁГї ГЇГ«Г ГЈГЁГ­Г  (32 Г±ГЁГ¬ГўГ®Г«Г , ГЎГҐГ§ ГЇГ°Г®ГЎГҐГ«Г®Гў)", Color.LightGray);
+            AppendToLog($"  ГЁГ±ГЇГ°Г ГўГ«ГҐГ­Г  Г®ГёГЁГЎГЄГ , ГЁГ§-Г§Г  ГЄГ®ГІГ®Г°Г®Г© ГЄГ®Г¬Г Г­Г¤Г» ГЎГҐГ§ ГЄГ®Г­ГґГ«ГЁГЄГІГ®Гў ГІГ°ГҐГЎГ®ГўГ Г«ГЁ ГЇГ°ГҐГґГЁГЄГ± ГЇГ«Г ГЈГЁГ­Г ", Color.LightGray);
+            AppendToLog($"  Г¤Г®ГЎГ ГўГ«ГҐГ­Г» ГЇГ®Г¤Г±ГЄГ Г§ГЄГЁ Г¤Г«Гї Г­ГҐГўГҐГ°Г­Г® ГўГўГҐГ¤ГҐГ­Г­Г»Гµ ГЄГ®Г¬Г Г­Г¤ (Г¤Г® 5 ГЇГ°ГҐГ¤Г«Г®Г¦ГҐГ­ГЁГ©, ГўГЄГ«ГѕГ·Г Гї ГЄГ®Г¬Г Г­Г¤Г» ГЇГ«Г ГЈГЁГ­Г®Гў)", Color.LightGray);
+            AppendToLog($"  ГЄГ®Г¬Г Г­Г¤Г  versions Г¤Г«Гї Г®ГІГ®ГЎГ°Г Г¦ГҐГ­ГЁГї ГЁГ±ГІГ®Г°ГЁГЁ ГўГҐГ°Г±ГЁГ©", Color.LightGray);
         }
 
         private void ConsoleInfoHistory()
         {
             AppendToLog("remloop version history:", Color.Cyan);
             AppendToLog($"Version 0.1:", Color.LightGray);
-            AppendToLog($"  начало сборки remloop консоли", Color.Gray);
+            AppendToLog($"  Г­Г Г·Г Г«Г® Г±ГЎГ®Г°ГЄГЁ remloop ГЄГ®Г­Г±Г®Г«ГЁ", Color.Gray);
             AppendToLog($"Version 0.2:", Color.LightGray);
-            AppendToLog($"  создание оффициальных плагинов от разработчиков remloop консоли", Color.Gray);
-            AppendToLog($"  расширение API", Color.Gray);
-            AppendToLog($"  изменен дизайн консоли", Color.Gray);
+            AppendToLog($"  Г±Г®Г§Г¤Г Г­ГЁГҐ Г®ГґГґГЁГ¶ГЁГ Г«ГјГ­Г»Гµ ГЇГ«Г ГЈГЁГ­Г®Гў Г®ГІ Г°Г Г§Г°Г ГЎГ®ГІГ·ГЁГЄГ®Гў remloop ГЄГ®Г­Г±Г®Г«ГЁ", Color.Gray);
+            AppendToLog($"  Г°Г Г±ГёГЁГ°ГҐГ­ГЁГҐ API", Color.Gray);
+            AppendToLog($"  ГЁГ§Г¬ГҐГ­ГҐГ­ Г¤ГЁГ§Г Г©Г­ ГЄГ®Г­Г±Г®Г«ГЁ", Color.Gray);
             AppendToLog($"Version 0.2.1:", Color.LightGray);
-            AppendToLog($"  расширение API с способом подключения библиотек", Color.Gray);
+            AppendToLog($"  Г°Г Г±ГёГЁГ°ГҐГ­ГЁГҐ API Г± Г±ГЇГ®Г±Г®ГЎГ®Г¬ ГЇГ®Г¤ГЄГ«ГѕГ·ГҐГ­ГЁГї ГЎГЁГЎГ«ГЁГ®ГІГҐГЄ", Color.Gray);
             AppendToLog($"Version 0.4:", Color.LightGray);
-            AppendToLog($"  расширение API", Color.Gray);
-            AppendToLog($"  расширение добавлены команды для выхода (q, quit, close)", Color.Gray);
-            AppendToLog($"  улучшено сообщение при вводе неверной команды", Color.Gray);
+            AppendToLog($"  Г°Г Г±ГёГЁГ°ГҐГ­ГЁГҐ API", Color.Gray);
+            AppendToLog($"  Г°Г Г±ГёГЁГ°ГҐГ­ГЁГҐ Г¤Г®ГЎГ ГўГ«ГҐГ­Г» ГЄГ®Г¬Г Г­Г¤Г» Г¤Г«Гї ГўГ»ГµГ®Г¤Г  (q, quit, close)", Color.Gray);
+            AppendToLog($"  ГіГ«ГіГ·ГёГҐГ­Г® Г±Г®Г®ГЎГ№ГҐГ­ГЁГҐ ГЇГ°ГЁ ГўГўГ®Г¤ГҐ Г­ГҐГўГҐГ°Г­Г®Г© ГЄГ®Г¬Г Г­Г¤Г»", Color.Gray);
             AppendToLog($"Version 0.6:", Color.LightGray);
-            AppendToLog($"  команда info", Color.Gray);
-            AppendToLog($"  команда pinfo", Color.Gray);
-            AppendToLog($"  удаление верхней панели", Color.Gray);
-            AppendToLog($"  обновление API, с добавлением константа описания каждой зарег. команды", Color.Gray);
-            AppendToLog($"  добавлена проверка на регистрацию похожих по имени команд", Color.Gray);
-            AppendToLog($"  добавлена проверка на правильность названия плагина (32 символа, без пробелов)", Color.Gray);
-            AppendToLog($"  исправлена ошибка, из-за которой команды без конфликтов требовали префикс плагина", Color.Gray);
-            AppendToLog($"  добавлены подсказки для неверно введенных команд (до 5 предложений, включая команды плагинов)", Color.Gray);
-            AppendToLog($"  команда info-history для отображения истории версий", Color.Gray);
+            AppendToLog($"  ГЄГ®Г¬Г Г­Г¤Г  info", Color.Gray);
+            AppendToLog($"  ГЄГ®Г¬Г Г­Г¤Г  pinfo", Color.Gray);
+            AppendToLog($"  ГіГ¤Г Г«ГҐГ­ГЁГҐ ГўГҐГ°ГµГ­ГҐГ© ГЇГ Г­ГҐГ«ГЁ", Color.Gray);
+            AppendToLog($"  Г®ГЎГ­Г®ГўГ«ГҐГ­ГЁГҐ API, Г± Г¤Г®ГЎГ ГўГ«ГҐГ­ГЁГҐГ¬ ГЄГ®Г­Г±ГІГ Г­ГІГ  Г®ГЇГЁГ±Г Г­ГЁГї ГЄГ Г¦Г¤Г®Г© Г§Г Г°ГҐГЈ. ГЄГ®Г¬Г Г­Г¤Г»", Color.Gray);
+            AppendToLog($"  Г¤Г®ГЎГ ГўГ«ГҐГ­Г  ГЇГ°Г®ГўГҐГ°ГЄГ  Г­Г  Г°ГҐГЈГЁГ±ГІГ°Г Г¶ГЁГѕ ГЇГ®ГµГ®Г¦ГЁГµ ГЇГ® ГЁГ¬ГҐГ­ГЁ ГЄГ®Г¬Г Г­Г¤", Color.Gray);
+            AppendToLog($"  Г¤Г®ГЎГ ГўГ«ГҐГ­Г  ГЇГ°Г®ГўГҐГ°ГЄГ  Г­Г  ГЇГ°Г ГўГЁГ«ГјГ­Г®Г±ГІГј Г­Г Г§ГўГ Г­ГЁГї ГЇГ«Г ГЈГЁГ­Г  (32 Г±ГЁГ¬ГўГ®Г«Г , ГЎГҐГ§ ГЇГ°Г®ГЎГҐГ«Г®Гў)", Color.Gray);
+            AppendToLog($"  ГЁГ±ГЇГ°Г ГўГ«ГҐГ­Г  Г®ГёГЁГЎГЄГ , ГЁГ§-Г§Г  ГЄГ®ГІГ®Г°Г®Г© ГЄГ®Г¬Г Г­Г¤Г» ГЎГҐГ§ ГЄГ®Г­ГґГ«ГЁГЄГІГ®Гў ГІГ°ГҐГЎГ®ГўГ Г«ГЁ ГЇГ°ГҐГґГЁГЄГ± ГЇГ«Г ГЈГЁГ­Г ", Color.Gray);
+            AppendToLog($"  Г¤Г®ГЎГ ГўГ«ГҐГ­Г» ГЇГ®Г¤Г±ГЄГ Г§ГЄГЁ Г¤Г«Гї Г­ГҐГўГҐГ°Г­Г® ГўГўГҐГ¤ГҐГ­Г­Г»Гµ ГЄГ®Г¬Г Г­Г¤ (Г¤Г® 5 ГЇГ°ГҐГ¤Г«Г®Г¦ГҐГ­ГЁГ©, ГўГЄГ«ГѕГ·Г Гї ГЄГ®Г¬Г Г­Г¤Г» ГЇГ«Г ГЈГЁГ­Г®Гў)", Color.Gray);
+            AppendToLog($"  ГЄГ®Г¬Г Г­Г¤Г  info-history Г¤Г«Гї Г®ГІГ®ГЎГ°Г Г¦ГҐГ­ГЁГї ГЁГ±ГІГ®Г°ГЁГЁ ГўГҐГ°Г±ГЁГ©", Color.Gray);
         }
 
         private void btnClear_Click(object? sender, EventArgs e)
