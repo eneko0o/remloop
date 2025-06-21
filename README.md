@@ -80,14 +80,14 @@ using System.Drawing;
 using remloop;
 public class MyPlugin : IConsolePlugin
 {
-    public string Name => "MyPlugin";
+    public string Name => "plugin";
     public string Version => "1.0";
-    public string Description => "A sample plugin for remloop";
+    public string Description => "example description";
     private IConsoleApi _api;
     public void Initialize(IConsoleApi consoleApi)
     {
         _api = consoleApi;
-        _api.RegisterCommand("hello", HandleHello, "Prints a greeting message");
+        _api.RegisterCommand("hello", HandleHello, "Print hello in console");
     }
     private void HandleHello(string[] args)
     {
