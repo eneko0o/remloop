@@ -46,14 +46,16 @@ Creating Plugins
 Plugins extend remloop functionality by adding custom commands. They are written in C# and compiled dynamically from .cs files placed in the Plugins directory.
 Plugin Structure
 A plugin must implement the IConsolePlugin interface:
-`public interface IConsolePlugin
+```csharp
+public interface IConsolePlugin
 {
     string Name { get; }
     string Version { get; }
     string Description { get => null; }
     void Initialize(IConsoleApi consoleApi);
     IEnumerable<string> GetCommands();
-}`
+}
+```
 
 Steps to Create a Plugin
 
@@ -71,8 +73,8 @@ Return command names in GetCommands.
 
 **Example:**
 
-
-`using System;
+```csharp
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using remloop;
@@ -95,8 +97,8 @@ public class MyPlugin : IConsolePlugin
     {
         return new[] { "hello" };
     }
-}`
-
+}
+```
 
 > Place in Plugins Directory:
 
