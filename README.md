@@ -57,9 +57,9 @@ A plugin must implement the IConsolePlugin interface:
 
 Steps to Create a Plugin
 
-Create a C# File:
+> Create a C# File:
 
-Create a .cs file (e.g., MyPlugin.cs) in the Plugins directory.
+> Create a .cs file (e.g., MyPlugin.cs) in the Plugins directory.
 
 
 Implement the Plugin:
@@ -69,31 +69,28 @@ Set Name (max 32 characters, no spaces), Version, and optionally Description.
 Use Initialize to register commands via IConsoleApi.
 Return command names in GetCommands.
 
-Example:
+**Example:**
+
+
 `using System;
 using System.Collections.Generic;
 using System.Drawing;
 using remloop;
-
 public class MyPlugin : IConsolePlugin
 {
     public string Name => "MyPlugin";
     public string Version => "1.0";
     public string Description => "A sample plugin for remloop";
-
     private IConsoleApi _api;
-
     public void Initialize(IConsoleApi consoleApi)
     {
         _api = consoleApi;
         _api.RegisterCommand("hello", HandleHello, "Prints a greeting message");
     }
-
     private void HandleHello(string[] args)
     {
         _api.Log("Hello from MyPlugin!", Color.Green);
     }
-
     public IEnumerable<string> GetCommands()
     {
         return new[] { "hello" };
@@ -101,52 +98,39 @@ public class MyPlugin : IConsolePlugin
 }`
 
 
-Place in Plugins Directory:
+> Place in Plugins Directory:
 
-Save the .cs file in the Plugins folder.
+> Save the .cs file in the Plugins folder.
 
 
-Load the Plugin:
+**Load the Plugin:**
 
 Restart remloop or reload plugins (if supported in future updates).
 The console logs plugin loading status (green for success, red for errors).
 
 
 
-Plugin Guidelines
+**Plugin Guidelines**
 
-Naming: Plugin names must be unique, up to 32 characters, and contain no spaces.
-Commands: Register commands using IConsoleApi.RegisterCommand. If multiple plugins define the same command, prefix with the plugin name (e.g., MyPlugin:hello).
-Dependencies: Plugins can reference .NET assemblies listed in PluginManager.cs (e.g., System.Linq, System.Net.Http).
-Error Handling: Handle exceptions in command handlers to prevent crashes. Errors during plugin loading are logged to the console.
+**Naming:** Plugin names must be unique, up to 32 characters, and contain no spaces.
+**Commands:** Register commands using IConsoleApi.RegisterCommand. If multiple plugins define the same command, prefix with the plugin name (e.g., MyPlugin:hello).
+**Dependencies:** Plugins can reference .NET assemblies listed in PluginManager.cs (e.g., System.Linq, System.Net.Http).
+**Error Handling:** Handle exceptions in command handlers to prevent crashes. Errors during plugin loading are logged to the console.
 
 
 Ensure plugins are tested thoroughly, as compilation errors or invalid configurations (e.g., missing Version) prevent loading.
 
-Managing Plugins
+**Managing Plugins**
 
-List Plugins: Use plist to view loaded plugins, their versions, and status.
-Plugin Info: Use pinfo <plugin_name> to get details about a specific plugin, including commands.
-Add/Remove Plugins:
-Add: Place a .cs file in the Plugins directory.
-Remove: Delete the .cs file from the Plugins directory and restart remloop.
+> List Plugins: Use plist to view loaded plugins, their versions, and status.
+
+> Plugin Info: Use pinfo <plugin_name> to get details about a specific plugin, including commands.
+
+> Add/Remove Plugins:
+
+> Add: Place a .cs file in the Plugins directory.
+
+> Remove: Delete the .cs file from the Plugins directory and restart remloop.
 
 
 Enable/Disable: Currently, plugins are enabled by default. Disabling requires removing the file or future API enhancements.
-
-Contributing
-Contributions are welcome! To contribute:
-
-Fork the repository.
-Create a feature branch (git checkout -b feature/my-feature).
-Commit changes (git commit -m 'Add my feature').
-Push to the branch (git push origin feature/my-feature).
-Open a pull request.
-
-Please ensure code follows the existing style and includes relevant documentation.
-License
-remloop is licensed under MIT License. See the LICENSE file for details.
-Contact
-For issues or suggestions, open an issue on GitHub or contact the maintainer at [your-email@example.com].
-
-Happy commanding with remloop!
